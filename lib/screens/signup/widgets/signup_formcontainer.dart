@@ -1,14 +1,12 @@
-
 import 'package:chat_app/constants/size.dart';
 import 'package:chat_app/utils/appcolor.dart';
-import 'package:chat_app/utils/buttons.dart';
 import 'package:chat_app/utils/labeltextfield.dart';
 import 'package:chat_app/utils/sizedboxheight.dart';
 import 'package:chat_app/utils/textfield.dart';
 import 'package:flutter/material.dart';
 
-class FormContainerSignIn extends StatelessWidget {
-  const FormContainerSignIn({
+class FormContainerSignUp extends StatelessWidget {
+  const FormContainerSignUp({
     super.key,
   });
 
@@ -27,7 +25,7 @@ class FormContainerSignIn extends StatelessWidget {
             vertical: 30.0,
             horizontal: 20.0,
           ),
-          height: ScreenSize.screenHeight(context) / 2,
+          height: ScreenSize.screenHeight(context) / 1.5,
           width: ScreenSize.screenWidth(context),
           decoration: BoxDecoration(
             color: Appcolor.white,
@@ -36,6 +34,15 @@ class FormContainerSignIn extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBoxHeight(height: 0.02),
+              LabelTextField(label: "Name"),
+              SizedBoxHeight(height: 0.01),
+              Textfield(
+                prefixIcon: Icon(
+                  Icons.person,
+                  color: Appcolor.appThemeColor,
+                ),
+              ),
               SizedBoxHeight(height: 0.02),
               LabelTextField(label: "Email"),
               SizedBoxHeight(height: 0.01),
@@ -55,17 +62,32 @@ class FormContainerSignIn extends StatelessWidget {
                   color: Appcolor.appThemeColor,
                 ),
               ),
+              SizedBoxHeight(height: 0.02),
+              LabelTextField(label: "Confirm Password"),
               SizedBoxHeight(height: 0.01),
-              Container(
-                alignment: Alignment.bottomRight,
-                child: LabelTextField(
-                  label: "Forgot Password?",
-                  fontSize: 16,
-                  textColor: const Color.fromARGB(255, 219, 19, 29),
+              Textfield(
+                prefixIcon: Icon(
+                  Icons.mail_outline,
+                  color: Appcolor.appThemeColor,
                 ),
               ),
-              SizedBoxHeight(height: 0.04),
-              SigninButton(),
+              SizedBoxHeight(height: 0.03),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  LabelTextField(
+                    label: "Already have an account",
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  LabelTextField(
+                    label: 'Login In Now!',
+                    textColor: Appcolor.appThemeColor,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w500,
+                  )
+                ],
+              ),
             ],
           ),
         ),

@@ -5,14 +5,14 @@ import 'package:chat_app/utils/labeltextfield.dart';
 import 'package:chat_app/utils/sizedboxheight.dart';
 import 'package:flutter/material.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({super.key});
+class SignInPage extends StatefulWidget {
+  const SignInPage({super.key});
 
   @override
-  State<SignUpPage> createState() => _SignUpPageState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                FormContainer(),
+                FormContainerSignIn(),
                 SizedBoxHeight(height: 0.05),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

@@ -1,4 +1,4 @@
-import 'package:chat_app/screens/siginin/signin_page.dart';
+import 'package:chat_app/screens/signup/view/siginup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SignUpPage(),
+      // home: const SignInPage(),
+      home: const Signup(),
     );
   }
 }
