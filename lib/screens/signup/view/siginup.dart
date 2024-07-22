@@ -13,6 +13,8 @@ class Signup extends StatefulWidget {
 }
 
 class _SignupState extends State<Signup> {
+  String email = "", password = "", name = "", confirmPassword = "";
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
