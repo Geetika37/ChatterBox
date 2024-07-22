@@ -24,7 +24,7 @@ class _SignInPageState extends State<SignInPage> {
             child: Column(
               children: [
                 Center(
-                  child: LabelTextField(
+                  child: LabelText(
                     label: "SignIn",
                     textColor: Appcolor.white,
                     fontSize: 24.0,
@@ -32,7 +32,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ),
                 Center(
-                  child: LabelTextField(
+                  child: LabelText(
                     label: "Login to your account",
                     textColor: Appcolor.lightBrown,
                     fontSize: 20.0,
@@ -44,12 +44,12 @@ class _SignInPageState extends State<SignInPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    LabelTextField(
+                    LabelText(
                       label: "Don't have an account",
                       fontSize: 16.0,
                       fontWeight: FontWeight.w500,
                     ),
-                    LabelTextField(
+                    LabelText(
                       label: 'Sign Up Now!',
                       textColor: Appcolor.appThemeColor,
                       fontSize: 16.0,

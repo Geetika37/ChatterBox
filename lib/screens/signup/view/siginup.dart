@@ -24,7 +24,7 @@ class _SignupState extends State<Signup> {
             child: Column(
               children: [
                 Center(
-                  child: LabelTextField(
+                  child: LabelText(
                     label: "SignUp",
                     textColor: Appcolor.white,
                     fontSize: 24.0,
@@ -32,7 +32,7 @@ class _SignupState extends State<Signup> {
                   ),
                 ),
                 Center(
-                  child: LabelTextField(
+                  child: LabelText(
                     label: "Create a new Account",
                     textColor: Appcolor.lightBrown,
                     fontSize: 20.0,

@@ -2,8 +2,8 @@ import 'package:chat_app/constants/textstyle.dart';
 import 'package:chat_app/utils/appcolor.dart';
 import 'package:flutter/material.dart';
 
-class LabelTextField extends StatelessWidget {
-  const LabelTextField({
+class LabelText extends StatelessWidget {
+  const LabelText({
     super.key,
     required this.label,
     this.fontSize = 18,

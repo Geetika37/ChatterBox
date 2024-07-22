@@ -1,5 +1,6 @@
-import 'package:chat_app/screens/signup/view/siginup.dart';
+import 'package:chat_app/screens/siginin/view/signin_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -18,8 +19,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: const SignInPage(),
-      home: const Signup(),
+      home: const SignInPage(),
+      // home: const Signup(),
+      // home: HomePage(),
     );
   }
 }

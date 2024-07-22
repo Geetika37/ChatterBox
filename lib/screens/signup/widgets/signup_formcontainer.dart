@@ -35,7 +35,7 @@ class FormContainerSignUp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBoxHeight(height: 0.02),
-              LabelTextField(label: "Name"),
+              LabelText(label: "Name"),
               SizedBoxHeight(height: 0.01),
               Textfield(
                 prefixIcon: Icon(
@@ -44,7 +44,7 @@ class FormContainerSignUp extends StatelessWidget {
                 ),
               ),
               SizedBoxHeight(height: 0.02),
-              LabelTextField(label: "Email"),
+              LabelText(label: "Email"),
               SizedBoxHeight(height: 0.01),
               Textfield(
                 prefixIcon: Icon(
@@ -53,7 +53,7 @@ class FormContainerSignUp extends StatelessWidget {
                 ),
               ),
               SizedBoxHeight(height: 0.02),
-              LabelTextField(label: "Password"),
+              LabelText(label: "Password"),
               SizedBoxHeight(height: 0.01),
               Textfield(
                 obscureText: true,
@@ -63,7 +63,7 @@ class FormContainerSignUp extends StatelessWidget {
                 ),
               ),
               SizedBoxHeight(height: 0.02),
-              LabelTextField(label: "Confirm Password"),
+              LabelText(label: "Confirm Password"),
               SizedBoxHeight(height: 0.01),
               Textfield(
                 prefixIcon: Icon(
@@ -75,12 +75,12 @@ class FormContainerSignUp extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  LabelTextField(
-                    label: "Already have an account",
+                  LabelText(
+                    label: "Already have an account? ",
                     fontSize: 16.0,
                     fontWeight: FontWeight.w500,
                   ),
-                  LabelTextField(
+                  LabelText(
                     label: 'Login In Now!',
                     textColor: Appcolor.appThemeColor,
                     fontSize: 16.0,

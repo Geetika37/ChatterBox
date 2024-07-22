@@ -1,4 +1,3 @@
-
 import 'package:chat_app/constants/size.dart';
 import 'package:chat_app/utils/appcolor.dart';
 import 'package:chat_app/utils/buttons.dart';
@@ -37,7 +36,7 @@ class FormContainerSignIn extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBoxHeight(height: 0.02),
-              LabelTextField(label: "Email"),
+              LabelText(label: "Email"),
               SizedBoxHeight(height: 0.01),
               Textfield(
                 prefixIcon: Icon(
@@ -46,7 +45,7 @@ class FormContainerSignIn extends StatelessWidget {
                 ),
               ),
               SizedBoxHeight(height: 0.02),
-              LabelTextField(label: "Password"),
+              LabelText(label: "Password"),
               SizedBoxHeight(height: 0.01),
               Textfield(
                 obscureText: true,
@@ -58,7 +57,7 @@ class FormContainerSignIn extends StatelessWidget {
               SizedBoxHeight(height: 0.01),
               Container(
                 alignment: Alignment.bottomRight,
-                child: LabelTextField(
+                child: LabelText(
                   label: "Forgot Password?",
                   fontSize: 16,
                   textColor: const Color.fromARGB(255, 219, 19, 29),
