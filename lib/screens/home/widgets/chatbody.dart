@@ -1,8 +1,10 @@
 import 'package:chat_app/constants/size.dart';
+import 'package:chat_app/screens/chat/view/chatpage.dart';
 import 'package:chat_app/screens/home/widgets/chatsingle_widget.dart';
 import 'package:chat_app/utils/appcolor.dart';
 import 'package:chat_app/utils/sizedboxheight.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ChatBody extends StatelessWidget {
   const ChatBody({
@@ -16,19 +18,20 @@ class ChatBody extends StatelessWidget {
       width: ScreenSize.screenWidth(context),
       height: ScreenSize.screenHeight(context) / 1.15,
       decoration: BoxDecoration(
-          color: Appcolor.homeText,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
-          )),
+        color: Appcolor.homeText,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+      ),
       child: Column(
         children: [
           SizedBoxHeight(height: 0.02),
-          ChatWidget(),
+          ChatWidget(onTap: () => Get.to(const ChatPage())),
           SizedBoxHeight(height: 0.01),
           Divider(color: Appcolor.lightBrown),
           SizedBoxHeight(height: 0.01),
-          ChatWidget(),
+          ChatWidget(onTap: () => Get.to(const ChatPage())),
         ],
       ),
     );
