@@ -51,37 +51,41 @@ class SigninButton extends StatelessWidget {
 
 class SignUpButton extends StatelessWidget {
   const SignUpButton({
-    super.key,
+    super.key, required this.onTap,
   });
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 25),
-        width: ScreenSize.screenWidth(context),
-        child: Material(
-          borderRadius: BorderRadius.circular(10),
-          elevation: 5.0,
-          child: Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color(0xFFd35249),
-                  Color(0xFFd0333b),
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+    return GestureDetector(
+      onTap:onTap ,
+      child: Center(
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 25),
+          width: ScreenSize.screenWidth(context),
+          child: Material(
+            borderRadius: BorderRadius.circular(10),
+            elevation: 5.0,
+            child: Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFFd35249),
+                    Color(0xFFd0333b),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius: BorderRadius.circular(10),
               ),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Center(
-              child: LabelText(
-                label: 'SIGN UP',
-                textColor: Appcolor.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
+              child: Center(
+                child: LabelText(
+                  label: 'SIGN UP',
+                  textColor: Appcolor.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ),

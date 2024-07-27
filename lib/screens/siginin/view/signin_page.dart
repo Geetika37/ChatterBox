@@ -1,9 +1,11 @@
 import 'package:chat_app/screens/siginin/widgets/signin_formcontainer.dart';
+import 'package:chat_app/screens/signup/view/siginup.dart';
 import 'package:chat_app/utils/appcolor.dart';
 import 'package:chat_app/utils/backgroundcontainer.dart';
 import 'package:chat_app/utils/labeltextfield.dart';
 import 'package:chat_app/utils/sizedboxheight.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -50,6 +52,9 @@ class _SignInPageState extends State<SignInPage> {
                       fontWeight: FontWeight.w500,
                     ),
                     LabelText(
+                      onTap: () {
+                        Get.to(() => const Signup());
+                      },
                       label: 'Sign Up Now!',
                       textColor: Appcolor.appThemeColor,
                       fontSize: 16.0,

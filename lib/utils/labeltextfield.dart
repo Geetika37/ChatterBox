@@ -9,17 +9,22 @@ class LabelText extends StatelessWidget {
     this.fontSize = 18,
     this.textColor = Appcolor.black,
     this.fontWeight = FontWeight.w500,
+    this.onTap,
   });
   final String label;
   final double fontSize;
   final Color textColor;
   final FontWeight fontWeight;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      label,
-      style: roboto(textColor, fontSize, fontWeight),
+    return InkWell(
+      onTap: onTap,
+      child: Text(
+        label,
+        style: roboto(textColor, fontSize, fontWeight),
+      ),
     );
   }
 }

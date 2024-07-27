@@ -5,7 +5,15 @@ import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "AIzaSyAQ8Itz6mzGKGoqfw7C-cjZ8nUKnwbClO8",
+      appId: "1:969055506232:android:ef12ab6c7cc0b4a7d6fbcd",
+      messagingSenderId: "969055506232",
+      projectId: "chatterbox-23a9f",
+      storageBucket: "chatterbox-23a9f.appspot.com",
+    ),
+  );
   runApp(const MyApp());
 }
 
