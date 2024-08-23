@@ -1,7 +1,6 @@
 import 'package:chat_app/constants/size.dart';
 import 'package:chat_app/screens/home/view/home.dart';
 import 'package:chat_app/screens/siginin/view/signin_page.dart';
-import 'package:chat_app/screens/signup/widgets/signup_formcontainer.dart';
 import 'package:chat_app/services/database.dart';
 import 'package:chat_app/services/shared_prefs.dart';
 import 'package:chat_app/utils/appcolor.dart';
@@ -69,7 +68,7 @@ class _SignupState extends State<Signup> {
           ),
           
         );
-        Get.to(() => const HomePage());
+        Get.offAll(() => const HomePage());
       } on FirebaseAuthException catch (e) {
         if (e.code == 'weak-password') {
           ScaffoldMessenger.of(context).showSnackBar(

@@ -1,19 +1,19 @@
 import 'package:chat_app/constants/size.dart';
-import 'package:chat_app/screens/home/view/home.dart';
 import 'package:chat_app/utils/appcolor.dart';
 import 'package:chat_app/utils/labeltextfield.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class SigninButton extends StatelessWidget {
   const SigninButton({
     super.key,
+    required this.onTap,
   });
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => Get.to(HomePage()),
+    return GestureDetector(
+      onTap: onTap,
       child: Center(
         child: SizedBox(
           width: ScreenSize.screenWidth(context) * 0.3,
@@ -51,14 +51,15 @@ class SigninButton extends StatelessWidget {
 
 class SignUpButton extends StatelessWidget {
   const SignUpButton({
-    super.key, required this.onTap,
+    super.key,
+    required this.onTap,
   });
   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:onTap ,
+      onTap: onTap,
       child: Center(
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 25),
