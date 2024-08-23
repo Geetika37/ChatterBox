@@ -37,11 +37,16 @@ class _SignupState extends State<Signup> {
             .createUserWithEmailAndPassword(email: email, password: password);
 
         String id = randomAlphaNumeric(10);
+        String user = emailController.text.replaceAll("@gmail.com", '');
+        String updateUsername =
+            user.replaceFirst(user[0], user[0].toUpperCase());
+        String firstLetter = user.substring(0, 1).toUpperCase();
 
         Map<String, dynamic> userInfoMap = {
           "Name": nameController.text,
           "E-mail": emailController.text,
-          "userName": emailController.text.replaceAll('@gmail.com', ""),
+          "userName": updateUsername,
+          "SearchKey": firstLetter,
           "Photo":
               "https://media.istockphoto.com/id/1361217779/photo/portrait-of-happy-teenage-boy-at-park.webp?b=1&s=170667a&w=0&k=20&c=hOYpnliBsXaoVHh9qp4BnksjwzFn4S7i8dWQMBlQggY=",
           "Id": id,
@@ -61,12 +66,9 @@ class _SignupState extends State<Signup> {
             content: Text(
               "Registered Successfully!",
               style: TextStyle(fontSize: 20),
-              
             ),
             backgroundColor: Colors.green,
-            
           ),
-          
         );
         Get.offAll(() => const HomePage());
       } on FirebaseAuthException catch (e) {

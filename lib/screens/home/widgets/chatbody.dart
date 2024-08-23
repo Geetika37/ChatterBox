@@ -9,14 +9,19 @@ import 'package:get/get.dart';
 class ChatBody extends StatelessWidget {
   const ChatBody({
     super.key,
+    required this.search,
   });
+
+  final bool search;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
       width: ScreenSize.screenWidth(context),
-      height: ScreenSize.screenHeight(context) / 1.15,
+      height: search
+          ? MediaQuery.of(context).size.height / 1.19
+          : ScreenSize.screenHeight(context) / 1.15,
       decoration: BoxDecoration(
         color: Appcolor.homeText,
         borderRadius: BorderRadius.only(
@@ -27,11 +32,15 @@ class ChatBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBoxHeight(height: 0.02),
-          ChatWidget(onTap: () => Get.to(const ChatPage())),
-          SizedBoxHeight(height: 0.01),
-          Divider(color: Appcolor.lightBrown),
-          SizedBoxHeight(height: 0.01),
-          ChatWidget(onTap: () => Get.to(const ChatPage())),
+          Column(
+            children: [
+              ChatWidget(onTap: () => Get.to(const ChatPage())),
+              SizedBoxHeight(height: 0.01),
+              Divider(color: Appcolor.lightBrown),
+              SizedBoxHeight(height: 0.01),
+              ChatWidget(onTap: () => Get.to(const ChatPage())),
+            ],
+          ),
         ],
       ),
     );
