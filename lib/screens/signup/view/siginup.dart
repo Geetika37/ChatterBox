@@ -45,7 +45,7 @@ class _SignupState extends State<Signup> {
         Map<String, dynamic> userInfoMap = {
           "Name": nameController.text,
           "E-mail": emailController.text,
-          "userName": updateUsername,
+          "userName": updateUsername.toUpperCase(),
           "SearchKey": firstLetter,
           "Photo":
               "https://media.istockphoto.com/id/1361217779/photo/portrait-of-happy-teenage-boy-at-park.webp?b=1&s=170667a&w=0&k=20&c=hOYpnliBsXaoVHh9qp4BnksjwzFn4S7i8dWQMBlQggY=",
